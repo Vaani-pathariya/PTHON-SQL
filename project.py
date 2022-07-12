@@ -1,6 +1,6 @@
 import mysql.connector
 import random
-file=mysql.connector.connect(host="localhost" ,user="vaani", passwd="vaani891#" , database="myshop")
+file=mysql.connector.connect(host="localhost" ,user="root", passwd="vaanipop" , database="myshop")
 from datetime import datetime
 available=["BEVERAGES" ,"DAALS_AND_OTHERS","DAIRY","FRUITS","SOAPS_AND_OTHERS","SPICES","VEGETABLES"]
 maximum=0
@@ -61,7 +61,6 @@ while block==90:
        phone=phone/10
        neon=neon+1
     length=neon
-    print (length)
     if length==10:
         block=80
     else:
@@ -84,11 +83,13 @@ elif b==2:
     while mun==7:
         payment=input("Enter your mode of payment ie a) Netbanking or b)Cash on delivery")
         if payment=="a":
+           payment="NET BANKING"
            mun=10
            pass
 
 
         elif payment=="b":
+           payment="CASH ON DELIVERY"
            mun=10
            pass
         else:
